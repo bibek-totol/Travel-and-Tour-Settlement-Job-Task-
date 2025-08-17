@@ -119,3 +119,38 @@
   }
 }
 
+.rdrDayNumber span {
+  color: #111827 !important; 
+}
+
+.rdrMonthAndYear {
+  color: #111827 !important; 
+}
+
+.rdrDateDisplay {
+  color: #111827 !important; 
+}
+
+.rdrDateDisplayWrapper {
+  color: #111827 !important; 
+}
+
+.rdrDay {
+  color: #111827 !important; 
+}
+
+.rdrDayDisabled {
+  color: #111827 !important; 
+}
+
+.rdrDayToday {
+  color: #4066b7 !important; 
+}
+
+
+
+
+
+
+
+

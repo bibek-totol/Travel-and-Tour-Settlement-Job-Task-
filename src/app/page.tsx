@@ -1,5 +1,7 @@
 import FeatureIcons from "./components/FeatureIcons";
 import SearchBar from "./components/SearchBar";
+import SpecialOffers from "./components/SpecialOffers";
+import Testimonials from "./components/Testimonials";
 import TripsSection from "./components/TripCard";
 
 
@@ -25,6 +27,8 @@ export default function Home() {
   
       <FeatureIcons />
       <TripsSection/>
+      <Testimonials/>
+      <SpecialOffers/>
     </main>
   );
 }

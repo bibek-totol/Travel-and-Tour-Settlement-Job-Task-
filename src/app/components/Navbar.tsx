@@ -145,7 +145,7 @@ export function Navbar() {
           </NavigationMenu>
         </div>
 
-        
+     
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>

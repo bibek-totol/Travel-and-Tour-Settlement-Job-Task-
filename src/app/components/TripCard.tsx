@@ -1,11 +1,12 @@
-import React from "react";
+
 import { Star, Clock, Zap, Heart, User } from "lucide-react";
+import Image from "next/image";
 
 const trips = [
   {
     title: "Delhi Goa Weekend Tour Package",
     image:
-      "https://images.unsplash.com/photo-1600783241324-0e46f30bc41d?auto=format&fit=crop&w=800&q=80",
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/Untitled-design-1-450x300.png",
     review: "1 Review",
     rating: 5,
     duration: "1 Nights / 2 Days",
@@ -14,7 +15,7 @@ const trips = [
   {
     title: "Delhi Sightseeing Tour",
     image:
-      "https://images.unsplash.com/photo-1585476401875-34a38c4652dd?auto=format&fit=crop&w=800&q=80",
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/3-6-450x300.png",
     review: "1 Review",
     rating: 5,
     duration: "1 Nights / 1 Days",
@@ -23,7 +24,7 @@ const trips = [
   {
     title: "Golden Triangle Tour With Pushkar",
     image:
-      "https://images.unsplash.com/photo-1587394202003-f6a6a2c8f6f5?auto=format&fit=crop&w=800&q=80",
+      "https://explorerajasthantours.com/wp-content/uploads/2022/04/Pushkar_Lake_Rajasthan-800x445-1-450x300.jpg",
     review: "6 Reviews",
     rating: 5,
     duration: "5 days",
@@ -32,7 +33,7 @@ const trips = [
   {
     title: "Golden Triangle Tour With Ranthambore",
     image:
-      "https://images.unsplash.com/photo-1603565819357-95a8b819addf?auto=format&fit=crop&w=800&q=80",
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/Ranthambore-National-Park-safari-1-2-450x300.jpg",
     review: "3 Reviews",
     rating: 5,
     duration: "7 Nights / 6 Days",
@@ -41,7 +42,7 @@ const trips = [
   {
     title: "Golden Triangle Tour With Udaipur",
     image:
-      "https://images.unsplash.com/photo-1582192723627-9b2b62d249b1?auto=format&fit=crop&w=800&q=80",
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/3-2-450x300.png",
     review: "No Review",
     rating: 0,
     duration: "7 Nights / 6 Days",
@@ -50,7 +51,7 @@ const trips = [
   {
     title: "Golden Triangle Tour With Varanasi",
     image:
-      "https://images.unsplash.com/photo-1549270340-5c6b0e5c948e?auto=format&fit=crop&w=800&q=80",
+      "https://explorerajasthantours.com/wp-content/uploads/2022/11/varanasi-portrait_tania-chatterjee_3-1-450x300.jpg",
     review: "No Review",
     rating: 0,
     duration: "7 Nights / 6 Days",
@@ -59,7 +60,7 @@ const trips = [
   {
     title: "Jaipur Abhaneri Weekend Tour Package",
     image:
-      "https://images.unsplash.com/photo-1581338834647-b0fbba837b41?auto=format&fit=crop&w=800&q=80",
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/panoramic-view-chand-baori-stepwell-famous-village-abhaneri-rajasthan-india-111637598-450x300.jpg",
     review: "No Review",
     rating: 0,
     duration: "1 Nights / 2 Days",
@@ -68,7 +69,7 @@ const trips = [
   {
     title: "Jaipur Ranthambore Same Day Tour",
     image:
-      "https://images.unsplash.com/photo-1588422333075-0c9e8342b2ac?auto=format&fit=crop&w=800&q=80",
+ "https://explorerajasthantours.com/wp-content/uploads/2022/10/2-5-450x300.png",
     review: "No Review",
     rating: 0,
     duration: "1 Nights / 1 Days",
@@ -80,10 +81,13 @@ const TripCard = ({ trip }: { trip: any }) => {
   return (
     <div className="bg-white rounded-lg shadow hover:shadow-lg transition p-2">
       <div className="relative">
-        <img
-          src={trip.image}
+        <Image
+          src={trip?.image}
           alt={trip.title}
-          className="w-full h-48 object-cover rounded-lg"
+          width={450}
+          height={300}
+         
+          className="object-cover rounded-lg"
         />
         <button className="absolute top-2 right-2 bg-white rounded-full p-1 shadow">
           <Heart className="w-5 h-5 text-gray-700" />
