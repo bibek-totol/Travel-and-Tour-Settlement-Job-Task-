@@ -4,6 +4,7 @@
       "id": "golden-triangle-ranthambore",
       "title": "Golden Triangle Tour With Ranthambore",
       "rating": 5,
+      "image":"https://explorerajasthantours.com/wp-content/uploads/2022/10/Untitled-design-1-450x300.png",
       "reviews": 3,
       "duration": "7 Nights / 6 Days",
       "tourType": "Daily Tour",
@@ -49,6 +50,8 @@
       "id": "rajasthan-desert-safari",
       "title": "Rajasthan Desert Safari Tour",
       "rating": 4.8,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/3-6-450x300.png",
       "reviews": 12,
       "duration": "6 Nights / 5 Days",
       "tourType": "Adventure Tour",
@@ -91,6 +94,8 @@
       "id": "kerala-backwaters",
       "title": "Kerala Backwaters & Hill Stations",
       "rating": 4.9,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/04/Pushkar_Lake_Rajasthan-800x445-1-450x300.jpg",
       "reviews": 20,
       "duration": "8 Nights / 7 Days",
       "tourType": "Nature & Leisure",
@@ -136,6 +141,8 @@
       "id": "kashmir-paradise-tour",
       "title": "Kashmir Paradise Tour",
       "rating": 5,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/Ranthambore-National-Park-safari-1-2-450x300.jpg",
       "reviews": 18,
       "duration": "6 Nights / 7 Days",
       "tourType": "Scenic Tour",
@@ -164,6 +171,8 @@
       "id": "ladakh-adventure",
       "title": "Ladakh Adventure Tour",
       "rating": 4.7,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/3-2-450x300.png",
       "reviews": 22,
       "duration": "9 Nights / 10 Days",
       "tourType": "Adventure Tour",
@@ -193,6 +202,8 @@
       "id": "goa-beach-party",
       "title": "Goa Beach & Party Tour",
       "rating": 4.5,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/11/varanasi-portrait_tania-chatterjee_3-1-450x300.jpg",
       "reviews": 45,
       "duration": "4 Nights / 5 Days",
       "tourType": "Leisure Tour",
@@ -221,6 +232,8 @@
       "id": "andaman-islands",
       "title": "Andaman Islands Tour",
       "rating": 4.9,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/panoramic-view-chand-baori-stepwell-famous-village-abhaneri-rajasthan-india-111637598-450x300.jpg",
       "reviews": 30,
       "duration": "6 Nights / 7 Days",
       "tourType": "Island Tour",
@@ -250,6 +263,8 @@
       "id": "sikkim-darjeeling",
       "title": "Sikkim & Darjeeling Delight",
       "rating": 4.6,
+      "image":
+ "https://explorerajasthantours.com/wp-content/uploads/2022/10/2-5-450x300.png",
       "reviews": 27,
       "duration": "7 Nights / 8 Days",
       "tourType": "Nature & Heritage",
@@ -280,6 +295,8 @@
       "id": "varanasi-spiritual",
       "title": "Varanasi Spiritual Journey",
       "rating": 4.8,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/Untitled-design-1-450x300.png",
       "reviews": 19,
       "duration": "4 Nights / 5 Days",
       "tourType": "Spiritual Tour",
@@ -307,6 +324,8 @@
       "id": "meghalaya-explorer",
       "title": "Meghalaya Explorer Tour",
       "rating": 4.9,
+      "image":
+      "https://explorerajasthantours.com/wp-content/uploads/2022/10/3-6-450x300.png",
       "reviews": 15,
       "duration": "5 Nights / 6 Days",
       "tourType": "Nature Tour",

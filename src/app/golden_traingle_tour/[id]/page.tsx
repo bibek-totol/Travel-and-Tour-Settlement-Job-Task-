@@ -9,6 +9,7 @@ import {
 import { Globe,Star  } from "lucide-react";
 import TripsSection from "@/app/components/TripCard";
 import { alltourapidata } from "@/app/fetcApi/alltourapidata";
+import BookingForm from "@/app/components/BookingForm";
 
 
 
@@ -127,61 +128,7 @@ export default async function page({params}:{params:{id:string}}) {
         </div>
 
 
-     
-
-         <div className="sticky top-24 self-start"> 
-        <div className="border rounded-2xl shadow-md p-6 max-w-md  ">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-lg font-semibold">From: ₹0,00</span>
-            <span className="text-yellow-500">⭐  {tour.rating}/{tour.reviews}</span>
-          </div>
-
-          <form className="space-y-4 ">
-          <div className="flex space-x-2">
-            <input
-              type="text"
-              placeholder="Your name*"
-              className="w-full border rounded-lg p-2"
-            />
-            <input
-              type="text"
-              placeholder="Phone number"
-              className="w-full border rounded-lg p-2"
-            />
-          </div>
-            <input
-              type="email"
-              placeholder="Your email*"
-              className="w-full border rounded-lg p-2"
-            />
-            <div className="flex space-x-2">
-              <input
-                type="text"
-                placeholder="Peoples"
-                className="w-1/2 border rounded-lg p-2"
-              />
-              <input
-                type="text"
-                placeholder="Country Of Resider"
-                className="w-1/2 border rounded-lg p-2"
-              />
-            </div>
-            <textarea
-              placeholder="Any Message"
-              className="w-full border rounded-lg p-2 h-20"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-orange-500 text-white font-semibold py-2 rounded-full hover:bg-orange-600"
-            >
-              Book Now
-            </button>
-          </form>
-        </div>
-
-        
-        
-        </div>
+         <BookingForm tour={tour} />
 
         
       </div>
