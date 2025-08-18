@@ -7,7 +7,7 @@ const ContactPage = () => {
     <div className="w-full">
         <iframe
           title="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.563565027332!2d75.7873!3d26.9367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3a7f508a6b7%3A0x8bde63b9b9b1b68c!2sDevi%20Marg%2C%20Bani%20Park%2C%20Jaipur%2C%20Rajasthan%20302016!5e0!3m2!1sen!2sin!4v1674123456789!5m2!1sen!2sin"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14229.17636893865!2d90.40432461171997!3d23.864016261820176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c500720bece3%3A0xb7d7f7cf7510b148!2sRaktch%20Technology%20%26%20Software!5e0!3m2!1sen!2sbd!4v1755526807620!5m2!1sen!2sbd"
           width="100%"
           height="450"
           style={{ border: 0 }}
@@ -17,7 +17,7 @@ const ContactPage = () => {
         ></iframe>
       </div>
 
-      
+
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
         
         
