@@ -29,7 +29,7 @@ export default function SearchBar() {
   
 
   return (
-    <div className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4 bg-white shadow-xl rounded-full px-6 py-6 relative z-10">
+    <div className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4 bg-white shadow-xl rounded-md lg:rounded-full px-6 py-6 relative z-10">
       
     
       <Popover>
@@ -66,7 +66,7 @@ export default function SearchBar() {
      
      <div className="p-4 flex flex-col ">
       <h1>Date</h1>
-      <p>Add date</p>
+      
       </div>
       
       <FaArrowRightLong className="w-5 h-5" />
@@ -74,7 +74,7 @@ export default function SearchBar() {
      
      <div>
       <h1>Check Out</h1>
-      <p>Add date</p>
+  
       </div>
 
     </div>

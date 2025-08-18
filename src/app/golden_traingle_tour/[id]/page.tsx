@@ -74,7 +74,7 @@ export default async function page({params}:{params:{id:string}}) {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
         <h1 className="text-2xl font-bold">{tour.title}</h1>
         <div className="flex items-center space-x-2 mt-2 md:mt-0">
-          <span className="text-yellow-500">⭐ {tour.rating}/{tour.review}</span>
+          <span className="text-yellow-500">⭐ {tour.rating}/{tour.reviews}</span>
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export default async function page({params}:{params:{id:string}}) {
           <div className="flex justify-center space-x-2 p-2">
           {
             tour.languages.map((lang: string, index: number) => (
-              <span  key={index} className="text-gray-600 ">{lang}</span>
+              <span  key={index} className="text-gray-600 text-[13px] lg:text-[16px] ">{lang}</span>
             ))
           }
          </div>

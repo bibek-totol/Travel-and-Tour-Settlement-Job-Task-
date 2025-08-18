@@ -16,7 +16,7 @@ function Banner() {
    
     <div className="relative  z-1">
     <Swiper
-    
+      
       modules={[Autoplay,EffectCoverflow, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
@@ -28,7 +28,7 @@ function Banner() {
     
       loop
       effect="coverflow"
-      className="absolute h-[70vh] bg-cover bg-center"
+      className="absolute h-[100vh] lg:h-[70vh] bg-cover bg-center"
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
@@ -39,13 +39,13 @@ function Banner() {
 
     >
       <SwiperSlide>
-        <img className="w-full" src="https://explorerajasthantours.com/wp-content/uploads/2022/11/varanasi-portrait_tania-chatterjee_3-1.jpg" alt="Slide 1" />
+        <img className="w-full h-[100vh]" src="https://explorerajasthantours.com/wp-content/uploads/2022/11/varanasi-portrait_tania-chatterjee_3-1.jpg" alt="Slide 1" />
       </SwiperSlide>
       <SwiperSlide>
-      <img className="w-full" src="https://explorerajasthantours.com/wp-content/uploads/2022/11/wwwPW2_0818_2000px-Pietrusiewicz-1-1.jpg" alt="Slide 1" />
+      <img className="w-full h-[100vh]" src="https://explorerajasthantours.com/wp-content/uploads/2022/11/wwwPW2_0818_2000px-Pietrusiewicz-1-1.jpg" alt="Slide 1" />
       </SwiperSlide>
       <SwiperSlide>
-      <img className="w-full" src="https://explorerajasthantours.com/wp-content/uploads/2022/11/World-Heritage-Rajasthan-1-1.jpg" alt="Slide 1" />
+      <img className="w-full h-[100vh]" src="https://explorerajasthantours.com/wp-content/uploads/2022/11/World-Heritage-Rajasthan-1-1.jpg" alt="Slide 1" />
       </SwiperSlide>
      
 
@@ -55,7 +55,7 @@ function Banner() {
     </Swiper>
 
     <div className="absolute z-10 bottom-[100px] inset-0  flex flex-col justify-center items-center px-4">
-          <h1 className="text-4xl md:text-5xl text-white font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl text-white font-bold mb-4 mt-14 lg:mt-0">
             Love where you're going
           </h1>
           <p className="text-lg text-white mb-8">
