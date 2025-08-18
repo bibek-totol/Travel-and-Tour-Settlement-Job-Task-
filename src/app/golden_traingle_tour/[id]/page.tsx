@@ -17,10 +17,13 @@ export async function generateStaticParams() {
 
 
 export default async function Page({ params }: { params: { id: string } }) {
+  const { id } = await params;
+
   const data: Tour[] = await alltourapidata();
 
+
   const tour = data.find(
-    (tour: { id: string }) => tour.id === params.id
+    (tour: { id: string }) => tour.id === id
   );
 
 
