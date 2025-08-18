@@ -7,20 +7,21 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import TripsSection from "@/app/components/TripCard";
-import { alltourapidata } from "@/app/fetcApi/alltourapidata";
+import { Tour, alltourapidata } from "@/app/fetcApi/alltourapidata";
 import BookingForm from "@/app/components/BookingForm";
 
 
-export async function generateStaticParams(): Promise<{ id: string }[]> {
+export async function generateStaticParams(): Promise<Pick<Tour, "id">[]> {
   const data = await alltourapidata();
+  return data.map((tour) => ({ id: tour.id }));
+}
 
-  return data.map((tour: { id: string }) => ({
-    id: tour.id,
-  }));
+interface PageProps {
+  params: Pick<Tour, "id">; 
 }
 
 
-export default async function Page({ params }: { params:  { id: string } }) {
+export default async function Page({ params }: PageProps) {
   const data = await alltourapidata();
 
   const tour = data.find(

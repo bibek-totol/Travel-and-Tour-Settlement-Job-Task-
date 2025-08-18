@@ -18,7 +18,7 @@ export interface ItineraryItem {
     highlightsX: string[];
     included: string[];
     excluded: string[];
-    itinerary: ItineraryItem[]; 
+    itinerary: ItineraryItem[];
   }
   
   export async function alltourapidata(): Promise<Tour[]> {
