@@ -40,7 +40,7 @@ export function Navbar() {
 
 
               <NavigationMenuItem>
-          <NavigationMenuTrigger>Golden Triangle Tour</NavigationMenuTrigger>
+          <NavigationMenuTrigger><Link href="/DynamicServicepage1">Golden Triangle Tour </Link></NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[200px] gap-4">
               <li>
@@ -61,7 +61,7 @@ export function Navbar() {
 
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Rajasthan Tour</NavigationMenuTrigger>
+          <NavigationMenuTrigger><Link href="/DynamicServicepage2">Rajasthan Tour</Link></NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[200px] gap-4">
               <li>
@@ -82,7 +82,7 @@ export function Navbar() {
 
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Same Day Tour</NavigationMenuTrigger>
+          <NavigationMenuTrigger><Link href="/DynamicServicepage3">Same Day Tour</Link></NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[200px] gap-4">
               <li>
@@ -103,7 +103,7 @@ export function Navbar() {
 
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Weekend Tour</NavigationMenuTrigger>
+          <NavigationMenuTrigger><Link href="/DynamicServicepage4">Weekend Tour</Link></NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[200px] gap-4">
               <li>
@@ -118,6 +118,14 @@ export function Navbar() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
+
+
+        <NavigationMenuItem>
+                <NavigationMenuLink>
+                  <Link className="text-black text-bold" href="/ContactPage" >Contact</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
 
 

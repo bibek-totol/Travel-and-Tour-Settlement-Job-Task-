@@ -8,13 +8,12 @@ import {
 } from "@/components/ui/accordion";
 import { Globe,Star  } from "lucide-react";
 import TripsSection from "@/app/components/TripCard";
+import { alltourapidata } from "@/app/fetcApi/alltourapidata";
 
 
-
-const alltourapidata = fetch('http://localhost:3000/api.json').then(res => res.json());
 
 export async function generateStaticParams() {
-  const data = await alltourapidata;
+  const data = await alltourapidata();
   
   return data.map((tour:{id:string}) => ({
     id: tour.id,
@@ -25,7 +24,7 @@ export async function generateStaticParams() {
 
 
 export default async function page({params}:{params:{id:string}}) {
-  const data = await alltourapidata;
+  const data = await alltourapidata();
 
 
 
