@@ -11,7 +11,7 @@ import { alltourapidata } from "@/app/fetcApi/alltourapidata";
 import BookingForm from "@/app/components/BookingForm";
 
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ id: string }[]> {
   const data = await alltourapidata();
 
   return data.map((tour: { id: string }) => ({
@@ -20,12 +20,15 @@ export async function generateStaticParams() {
 }
 
 
-export default async function Page({ params }: { params: any}) {
+export default async function Page({ params }: { params:  { id: string } }) {
   const data = await alltourapidata();
 
   const tour = data.find(
     (tour: { id: string }) => tour.id === params.id
   );
+
+
+
 
 
 
@@ -47,6 +50,10 @@ export default async function Page({ params }: { params: any}) {
       likes: 0,
     },
   ];
+
+  if (!tour) {
+    return <div>Tour not found</div>;
+  }
 
   return (
     <div className="min-h-screen relative">
