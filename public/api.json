@@ -1,0 +1,265 @@
+[
+    {
+      "id": "golden-triangle-ranthambore",
+      "title": "Golden Triangle Tour With Ranthambore",
+      "rating": 5,
+      "reviews": 3,
+      "duration": "7 Nights / 6 Days",
+      "tourType": "Daily Tour",
+      "groupSize": "Unlimited",
+      "languages": ["English", "Espanol", "Francais", "Hindi", "Japanese"],
+      "about": "Explore Delhi, Agra, Ranthambore and Jaipur with this classic Golden Triangle Tour. Visit the Taj Mahal, Qutub Minar, Red Fort, Ranthambore Safari, and enjoy Jaipur’s Amber Fort elephant ride.",
+      "highlights": [
+        "Hotel accommodation",
+        "Private Air-conditioned car with driver",
+        "All sightseeing with private local guides",
+        "Driver allowances & fuel charges",
+        "Personal care and attention",
+        "All currently applicable taxes"
+      ],
+      "included": [
+        "Hotel accommodation",
+        "Private Air-conditioned car with driver",
+        "All sightseeing with private local guides",
+        "Driver allowances & fuel charges",
+        "Personal care and attention",
+        "All currently applicable taxes"
+      ],
+      "excluded": ["Additional Services", "Insurance", "Drink", "Tickets"],
+      "itinerary": [
+        { "day": 1, "title": "Delhi", "description": "Arrival at Delhi airport, transfer to hotel, overnight stay." },
+        { "day": 2, "title": "Delhi → Agra", "description": "Drive to Agra, visit Taj Mahal & Agra Fort." },
+        { "day": 3, "title": "Agra", "description": "Local sightseeing in Agra." },
+        { "day": 4, "title": "Agra → Ranthambore", "description": "Travel to Ranthambore, enjoy Jeep Safari." },
+        { "day": 5, "title": "Ranthambore → Jaipur", "description": "Proceed to Jaipur, check-in to hotel." },
+        { "day": 6, "title": "Jaipur", "description": "Sightseeing including Amber Fort, Hawa Mahal, City Palace." },
+        { "day": 7, "title": "Jaipur → Delhi", "description": "Return journey to Delhi." }
+      ]
+    },
+    {
+      "id": "rajasthan-desert-safari",
+      "title": "Rajasthan Desert Safari Tour",
+      "rating": 4.8,
+      "reviews": 12,
+      "duration": "6 Nights / 5 Days",
+      "tourType": "Adventure Tour",
+      "groupSize": "20 People",
+      "languages": ["English", "French", "German", "Hindi"],
+      "about": "Discover Rajasthan’s desert life with camel safari in Jaisalmer, cultural performances, forts, and palaces in Jodhpur and Bikaner.",
+      "highlights": [
+        "Camel safari in Thar Desert",
+        "Stay in desert camps",
+        "Folk dance & music",
+        "Jaisalmer Fort & Havelis",
+        "Mehrangarh Fort Jodhpur"
+      ],
+      "included": [
+        "Accommodation in heritage hotels & camps",
+        "Breakfast & Dinner",
+        "Private AC car with driver",
+        "Local guide",
+        "All taxes"
+      ],
+      "excluded": ["Airfare", "Lunch", "Travel Insurance", "Personal Expenses"],
+      "itinerary": [
+        { "day": 1, "title": "Jodhpur", "description": "Arrival and visit Mehrangarh Fort." },
+        { "day": 2, "title": "Jodhpur → Jaisalmer", "description": "Drive to Jaisalmer, evening city walk." },
+        { "day": 3, "title": "Jaisalmer", "description": "Explore Jaisalmer Fort & Patwon Ki Haveli." },
+        { "day": 4, "title": "Jaisalmer Desert Safari", "description": "Camel safari & overnight desert camp." },
+        { "day": 5, "title": "Jaisalmer → Bikaner", "description": "Visit Junagarh Fort & Karni Mata Temple." },
+        { "day": 6, "title": "Bikaner Departure", "description": "End of tour, departure." }
+      ]
+    },
+    {
+      "id": "kerala-backwaters",
+      "title": "Kerala Backwaters & Hill Stations",
+      "rating": 4.9,
+      "reviews": 20,
+      "duration": "8 Nights / 7 Days",
+      "tourType": "Nature & Leisure",
+      "groupSize": "15 People",
+      "languages": ["English", "Hindi", "Malayalam", "Tamil"],
+      "about": "Experience Kerala’s lush greenery with backwater cruises, hill stations of Munnar, and beaches of Kovalam.",
+      "highlights": [
+        "Houseboat cruise in Alleppey",
+        "Tea plantations in Munnar",
+        "Kovalam beach relaxation",
+        "Periyar Wildlife Sanctuary",
+        "Ayurvedic massage sessions"
+      ],
+      "included": [
+        "Accommodation in resorts & houseboats",
+        "Breakfast & Dinner",
+        "Private car with driver",
+        "All sightseeing with guides",
+        "Taxes"
+      ],
+      "excluded": ["Flight tickets", "Lunch", "Entry fees", "Personal expenses"],
+      "itinerary": [
+        { "day": 1, "title": "Cochin", "description": "Arrival, sightseeing in Fort Kochi." },
+        { "day": 2, "title": "Cochin → Munnar", "description": "Drive to Munnar, visit tea plantations." },
+        { "day": 3, "title": "Munnar", "description": "Explore Eravikulam National Park." },
+        { "day": 4, "title": "Munnar → Thekkady", "description": "Drive to Thekkady, Periyar Wildlife Sanctuary." },
+        { "day": 5, "title": "Thekkady → Alleppey", "description": "Houseboat cruise through backwaters." },
+        { "day": 6, "title": "Alleppey → Kovalam", "description": "Travel to Kovalam beach." },
+        { "day": 7, "title": "Kovalam", "description": "Relaxation, Ayurveda massage." },
+        { "day": 8, "title": "Departure", "description": "Transfer to Trivandrum airport." }
+      ]
+    },
+    {
+      "id": "kashmir-paradise-tour",
+      "title": "Kashmir Paradise Tour",
+      "rating": 5,
+      "reviews": 18,
+      "duration": "6 Nights / 7 Days",
+      "tourType": "Scenic Tour",
+      "groupSize": "25 People",
+      "languages": ["English", "Hindi", "Urdu"],
+      "about": "Enjoy the natural beauty of Kashmir, with Dal Lake, Gulmarg, Sonmarg, and Pahalgam in a single package.",
+      "highlights": ["Shikara ride in Dal Lake", "Snow activities in Gulmarg", "Lidder River in Pahalgam", "Sonmarg Valley tour"],
+      "included": ["Hotel stay", "Breakfast & Dinner", "Private car", "Guided tours"],
+      "excluded": ["Airfare", "Lunch", "Entry tickets"],
+      "itinerary": [
+        { "day": 1, "title": "Srinagar", "description": "Arrival, Shikara ride on Dal Lake." },
+        { "day": 2, "title": "Srinagar → Gulmarg", "description": "Drive to Gulmarg, enjoy gondola ride." },
+        { "day": 3, "title": "Gulmarg → Pahalgam", "description": "Explore valleys & Lidder River." },
+        { "day": 4, "title": "Pahalgam → Sonmarg", "description": "Excursion to Sonmarg." },
+        { "day": 5, "title": "Sonmarg → Srinagar", "description": "Return to Srinagar, Mughal Gardens tour." },
+        { "day": 6, "title": "Srinagar Departure", "description": "Drop at airport." }
+      ]
+    },
+    {
+      "id": "ladakh-adventure",
+      "title": "Ladakh Adventure Tour",
+      "rating": 4.7,
+      "reviews": 22,
+      "duration": "9 Nights / 10 Days",
+      "tourType": "Adventure Tour",
+      "groupSize": "15 People",
+      "languages": ["English", "Hindi"],
+      "about": "A thrilling adventure covering Leh, Pangong Lake, Nubra Valley, and Khardung La Pass.",
+      "highlights": ["Drive to Khardung La", "Pangong Lake camping", "Monastery visits", "Camel ride in Nubra Valley"],
+      "included": ["Hotel & camp stay", "Meals", "Permit fees", "Local transport"],
+      "excluded": ["Flight tickets", "Travel insurance"],
+      "itinerary": [
+        { "day": 1, "title": "Leh", "description": "Arrival & acclimatization." },
+        { "day": 2, "title": "Leh City", "description": "Sightseeing of monasteries." },
+        { "day": 3, "title": "Leh → Nubra", "description": "Drive via Khardung La, overnight in Nubra." },
+        { "day": 4, "title": "Nubra → Pangong", "description": "Drive to Pangong Lake." },
+        { "day": 5, "title": "Pangong → Leh", "description": "Return to Leh." },
+        { "day": 6, "title": "Departure", "description": "Fly back home." }
+      ]
+    },
+    {
+      "id": "goa-beach-party",
+      "title": "Goa Beach & Party Tour",
+      "rating": 4.5,
+      "reviews": 45,
+      "duration": "4 Nights / 5 Days",
+      "tourType": "Leisure Tour",
+      "groupSize": "Unlimited",
+      "languages": ["English", "Russian", "Hindi"],
+      "about": "Relax at the beaches of Goa, enjoy water sports, nightlife, and Portuguese heritage.",
+      "highlights": ["Baga & Calangute beaches", "Cruise party", "Old Goa churches", "Water sports"],
+      "included": ["Hotel stay", "Breakfast", "Airport transfers"],
+      "excluded": ["Lunch & Dinner", "Airfare"],
+      "itinerary": [
+        { "day": 1, "title": "Arrival", "description": "Check-in & relax at beach." },
+        { "day": 2, "title": "North Goa", "description": "Beach hopping & water sports." },
+        { "day": 3, "title": "South Goa", "description": "Explore Old Goa churches & spice plantation." },
+        { "day": 4, "title": "Cruise Night", "description": "Evening party cruise." },
+        { "day": 5, "title": "Departure", "description": "Airport drop." }
+      ]
+    },
+    {
+      "id": "andaman-islands",
+      "title": "Andaman Islands Tour",
+      "rating": 4.9,
+      "reviews": 30,
+      "duration": "6 Nights / 7 Days",
+      "tourType": "Island Tour",
+      "groupSize": "20 People",
+      "languages": ["English", "Hindi", "Bengali"],
+      "about": "Enjoy tropical paradise with pristine beaches, snorkeling, scuba diving, and history at Cellular Jail.",
+      "highlights": ["Havelock Island", "Radhanagar Beach", "Snorkeling & scuba", "Cellular Jail light show"],
+      "included": ["Resort stay", "Breakfast", "Ferry tickets"],
+      "excluded": ["Airfare", "Lunch", "Personal expenses"],
+      "itinerary": [
+        { "day": 1, "title": "Port Blair", "description": "Arrival & Cellular Jail show." },
+        { "day": 2, "title": "Havelock Island", "description": "Visit Radhanagar Beach." },
+        { "day": 3, "title": "Elephant Beach", "description": "Snorkeling & water sports." },
+        { "day": 4, "title": "Neil Island", "description": "Beach exploration." },
+        { "day": 5, "title": "Ross Island", "description": "Historical visit." },
+        { "day": 6, "title": "Port Blair", "description": "Local market visit." },
+        { "day": 7, "title": "Departure", "description": "Fly back home." }
+      ]
+    },
+    {
+      "id": "sikkim-darjeeling",
+      "title": "Sikkim & Darjeeling Delight",
+      "rating": 4.6,
+      "reviews": 27,
+      "duration": "7 Nights / 8 Days",
+      "tourType": "Nature & Heritage",
+      "groupSize": "30 People",
+      "languages": ["English", "Nepali", "Hindi", "Bengali"],
+      "about": "Explore monasteries, tea gardens, and Himalayan beauty in Sikkim & Darjeeling.",
+      "highlights": ["Tiger Hill sunrise", "Rumtek Monastery", "Tsomgo Lake", "Tea plantations"],
+      "included": ["Hotel stay", "Meals", "Local transport"],
+      "excluded": ["Airfare", "Permit fees"],
+      "itinerary": [
+        { "day": 1, "title": "Gangtok", "description": "Arrival & local sightseeing." },
+        { "day": 2, "title": "Gangtok", "description": "Excursion to Tsomgo Lake." },
+        { "day": 3, "title": "Gangtok → Pelling", "description": "Visit Rumtek Monastery, transfer to Pelling." },
+        { "day": 4, "title": "Pelling", "description": "Explore Pemayangtse Monastery & Kanchenjunga views." },
+        { "day": 5, "title": "Pelling → Darjeeling", "description": "Drive to Darjeeling." },
+        { "day": 6, "title": "Darjeeling", "description": "Tiger Hill sunrise & tea estate visit." },
+        { "day": 7, "title": "Darjeeling", "description": "Local sightseeing." },
+        { "day": 8, "title": "Departure", "description": "Return home." }
+      ]
+    },
+    {
+      "id": "varanasi-spiritual",
+      "title": "Varanasi Spiritual Journey",
+      "rating": 4.8,
+      "reviews": 19,
+      "duration": "4 Nights / 5 Days",
+      "tourType": "Spiritual Tour",
+      "groupSize": "40 People",
+      "languages": ["English", "Hindi"],
+      "about": "Witness Ganga Aarti, boat rides, and ancient temples in the holy city of Varanasi.",
+      "highlights": ["Evening Ganga Aarti", "Morning boat ride", "Kashi Vishwanath Temple", "Sarnath excursion"],
+      "included": ["Hotel stay", "Breakfast", "Guide services"],
+      "excluded": ["Lunch", "Airfare", "Personal expenses"],
+      "itinerary": [
+        { "day": 1, "title": "Arrival", "description": "Arrival at Varanasi, evening Ganga Aarti." },
+        { "day": 2, "title": "Boat Ride", "description": "Morning boat ride on Ganges." },
+        { "day": 3, "title": "Temples Tour", "description": "Visit Kashi Vishwanath Temple & local ghats." },
+        { "day": 4, "title": "Sarnath", "description": "Excursion to Sarnath." },
+        { "day": 5, "title": "Departure", "description": "Return journey." }
+      ]
+    },
+    {
+      "id": "meghalaya-explorer",
+      "title": "Meghalaya Explorer Tour",
+      "rating": 4.9,
+      "reviews": 15,
+      "duration": "5 Nights / 6 Days",
+      "tourType": "Nature Tour",
+      "groupSize": "25 People",
+      "languages": ["English", "Khasi", "Hindi"],
+      "about": "Discover the living root bridges, Cherrapunji waterfalls, and Dawki river in Meghalaya.",
+      "highlights": ["Living root bridge trek", "Mawsmai Caves", "Dawki crystal river", "Shillong city tour"],
+      "included": ["Hotel stay", "Private car", "Breakfast"],
+      "excluded": ["Airfare", "Lunch & Dinner"],
+      "itinerary": [
+        { "day": 1, "title": "Shillong", "description": "Arrival & local sightseeing." },
+        { "day": 2, "title": "Cherrapunji", "description": "Visit Nohkalikai waterfalls & caves." },
+        { "day": 3, "title": "Living Root Bridges", "description": "Day trek to root bridges." },
+        { "day": 4, "title": "Dawki", "description": "Boat ride in Dawki river." },
+        { "day": 5, "title": "Shillong", "description": "Explore Elephant Falls & Police Bazaar." },
+        { "day": 6, "title": "Departure", "description": "Airport drop." }
+      ]
+    }
+  ]
+  
