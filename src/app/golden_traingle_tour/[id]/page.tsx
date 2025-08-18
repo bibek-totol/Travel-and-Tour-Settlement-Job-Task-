@@ -10,6 +10,12 @@ import TripsSection from "@/app/components/TripCard";
 import { alltourapidata } from "@/app/fetcApi/alltourapidata";
 import BookingForm from "@/app/components/BookingForm";
 
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
 export async function generateStaticParams() {
   const data = await alltourapidata();
 
@@ -19,11 +25,7 @@ export async function generateStaticParams() {
 }
 
 
-export default async function Page({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function Page({ params }: PageProps) {
   const data = await alltourapidata();
 
   const tour = data.find(
