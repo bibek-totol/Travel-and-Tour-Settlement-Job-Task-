@@ -25,13 +25,13 @@ export async function generateStaticParams() {
 }
 
 
-type PageProps = {
+type Props = {
   params: {
     id: string;
   };
 };
 
-export default async function page({params}: PageProps) {
+export default async function page({params}: Props) {
   const data = await alltourapidata();
 
 
