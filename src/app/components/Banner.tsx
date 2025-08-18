@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-flip";
 import SearchBar from './SearchBar';
+import Image from 'next/image';
 
 
 function Banner() {

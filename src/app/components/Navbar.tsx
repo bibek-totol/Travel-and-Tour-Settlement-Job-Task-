@@ -17,8 +17,8 @@ import { Button } from "@/components/ui/button";
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Golden-Triangle-Tour-With-Pushkar",
+    href: "/golden_traingle_tour/Golden-Triangle-Tour-With-Pushkar",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
@@ -55,7 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 export function Navbar() {
   return (
     <header className="border-b">
-      <div className="flex items-center justify-between px-4 py-3 md:px-8">
+      <div className="flex items-center justify-evenly  px-4 py-3 md:px-8">
         
         <Link href="/" className="text-xl font-bold">
           Explore
@@ -66,42 +66,65 @@ export function Navbar() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                <NavigationMenuLink>
+                  <Link className="text-black text-bold" href="/" >Home</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Golden Traingle Tour</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <a
-                          className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                          href="/"
-                        >
-                          <div className="mt-4 mb-2 text-lg font-medium">shadcn/ui</div>
-                          <p className="text-muted-foreground text-sm leading-tight">
-                            Beautifully designed components built with Tailwind CSS.
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                    <ListItem href="/docs" title="Introduction">
-                      Re-usable components built using Radix UI and Tailwind CSS.
-                    </ListItem>
-                    <ListItem href="/docs/installation" title="Installation">
-                      How to install dependencies and structure your app.
-                    </ListItem>
-                    <ListItem href="/docs/primitives/typography" title="Typography">
-                      Styles for headings, paragraphs, lists...etc
-                    </ListItem>
+                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
+                    {components.map((component) => (
+                      <ListItem key={component.title}  href={component.href}>
+                        {component.title}
+                      </ListItem>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+
+
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Components</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
                     {components.map((component) => (
-                      <ListItem key={component.title} title={component.title} href={component.href}>
-                        {component.description}
+                      <ListItem key={component.title}  href={component.href}>
+                        {component.title}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+
+
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
+                    {components.map((component) => (
+                      <ListItem key={component.title}  href={component.href}>
+                        {component.title}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
+                    {components.map((component) => (
+                      <ListItem key={component.title}  href={component.href}>
+                        {component.title}
                       </ListItem>
                     ))}
                   </ul>
@@ -114,33 +137,7 @@ export function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-4">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link href="#" className="flex-row items-center gap-2">
-                          <CircleHelpIcon />
-                          Backlog
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link href="#" className="flex-row items-center gap-2">
-                          <CircleIcon />
-                          To Do
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link href="#" className="flex-row items-center gap-2">
-                          <CircleCheckIcon />
-                          Done
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+              
             </NavigationMenuList>
           </NavigationMenu>
         </div>
@@ -150,7 +147,7 @@ export function Navbar() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
-                <MenuIcon className="h-6 w-6" />
+                <MenuIcon className="h-6 w-6 " />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="p-6 w-64">
