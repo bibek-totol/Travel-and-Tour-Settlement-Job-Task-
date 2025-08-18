@@ -13,6 +13,7 @@ import BookingForm from "@/app/components/BookingForm";
 
 
 
+
 export async function generateStaticParams() {
   const data = await alltourapidata();
   
@@ -24,7 +25,13 @@ export async function generateStaticParams() {
 }
 
 
-export default async function page({params}:{params:{id:string}}) {
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function page({params}: PageProps) {
   const data = await alltourapidata();
 
 
