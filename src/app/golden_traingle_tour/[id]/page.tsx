@@ -11,7 +11,30 @@ import TripsSection from "@/app/components/TripCard";
 
 
 
-export default function page() {
+const alltourapidata = fetch('http://localhost:3000/api.json').then(res => res.json());
+
+export async function generateStaticParams() {
+  const data = await alltourapidata;
+  
+  return data.map((tour:{id:string}) => ({
+    id: tour.id,
+  }));
+
+
+}
+
+
+export default async function page({params}:{params:{id:string}}) {
+  const data = await alltourapidata;
+
+
+
+
+  const tour = data.find(
+    (tour: { id: string }) => tour.id == params.id
+  );
+
+  
 
   const reviews = [
     {
@@ -38,7 +61,7 @@ export default function page() {
         <div className="flex flex-col lg:flex-row gap-0 lg:gap-4 ">
             <p className="text-orange-500 ml-0 lg:ml-[160px] p-2 lg:p-4">Home</p>
             <p className="text-orange-500 p-2 lg:p-4">Jaipur</p>
-            <p className="p-2 lg:p-4">Golden Triangle Tour With Pushkar</p>
+            <p className="p-2 lg:p-4">{tour.title}</p>
         </div>
         <hr className="my-2 text-gray-400 "/>
 
@@ -49,9 +72,9 @@ export default function page() {
         <div className="p-6 bg-white min-h-auto mx-auto max-w-7xl mt-4 ">
       
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-        <h1 className="text-2xl font-bold">Rajasthan Wildlife Tour</h1>
+        <h1 className="text-2xl font-bold">{tour.title}</h1>
         <div className="flex items-center space-x-2 mt-2 md:mt-0">
-          <span className="text-yellow-500">⭐ 5 (2 Reviews)</span>
+          <span className="text-yellow-500">⭐ {tour.rating}/{tour.review}</span>
         </div>
       </div>
 
@@ -59,21 +82,25 @@ export default function page() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <div className="flex flex-col items-center border p-3 rounded-xl shadow-sm">
           <span className="font-semibold">Duration</span>
-          <span className="text-gray-600">7 Nights / 6 Days</span>
+          <span className="text-gray-600">{tour.duration}</span>
         </div>
         <div className="flex flex-col items-center border p-3 rounded-xl shadow-sm">
           <span className="font-semibold">Tour Type</span>
-          <span className="text-gray-600">Daily Tour</span>
+          <span className="text-gray-600">{tour.tourType}</span>
         </div>
         <div className="flex flex-col items-center border p-3 rounded-xl shadow-sm">
           <span className="font-semibold">Group Size</span>
-          <span className="text-gray-600">Unlimited</span>
+          <span className="text-gray-600">{tour.groupSize}</span>
         </div>
-        <div className="flex flex-col items-center border p-3 rounded-xl shadow-sm">
+        <div className="flex flex-col items-center border p-4 rounded-xl shadow-sm">
           <span className="font-semibold">Languages</span>
-          <span className="text-gray-600 text-center">
-            English, Español, Français, Hindi, Japanese
-          </span>
+          <div className="flex justify-center space-x-2 p-2">
+          {
+            tour.languages.map((lang: string, index: number) => (
+              <span  key={index} className="text-gray-600 ">{lang}</span>
+            ))
+          }
+         </div>
         </div>
       </div>
 
@@ -86,22 +113,17 @@ export default function page() {
         <div>
           <h2 className="text-xl font-semibold mb-4">About this tour</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Rajasthan is very well known for the wildlife destination in India.
-            Rajasthan Wildlife Tour package includes Jaipur which is very well known as Pink City
-            where you can enjoy elephant ride at Amber Fort. Ranthambore National Park which is one
-            of the largest national park of Rajasthan, Bharatpur which is very well known for its
-            bird sanctuary and then Visit Sariska Wildlife Park. Enjoy Rajasthan wildlife tour
-            package with Explorer Rajasthan Tours with long–lasting memories.
+           {tour.about}
           </p>
 
+          <hr className="my-4 w-[90%]  lg:w-1/2" />
           <h2 className="text-xl font-semibold mb-4">HIGHLIGHTS</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Hotel accommodation</li>
-            <li>Private Air-conditioned car with driver</li>
-            <li>All sightseeing with private local guides</li>
-            <li>Driver allowances & fuel charges</li>
-            <li>Personal care and attention</li>
-            <li>All currently applicable taxes.</li>
+          {
+              tour.highlights.map((highlight: string, index: number) => (
+                <li key={index}>{highlight}</li>
+              ))
+            }
           </ul>
         </div>
 
@@ -112,7 +134,7 @@ export default function page() {
         <div className="border rounded-2xl shadow-md p-6 max-w-md  ">
           <div className="flex justify-between items-center mb-4">
             <span className="text-lg font-semibold">From: ₹0,00</span>
-            <span className="text-yellow-500">⭐ 5 (2 Reviews)</span>
+            <span className="text-yellow-500">⭐  {tour.rating}/{tour.reviews}</span>
           </div>
 
           <form className="space-y-4 ">
@@ -168,93 +190,46 @@ export default function page() {
 
 
 
-
-
-
-
+    
     <div className="p-6 bg-white max-w-7xl mx-auto relative">
-     
-      <h2 className="text-xl font-semibold mb-8">Included/Excluded</h2>
+    <hr className="my-4 w-[90%]  lg:w-1/2" />
+      <h2 className="text-xl font-semibold mb-2">Included/Excluded</h2>
       <div className="grid md:grid-cols-2 justify-start gap-4  mb-8 p-4 w-full lg:w-1/2 border border-gray-300">
 
 
         <div className="flex flex-col  gap-4">
 
-        <div className="flex items-center space-x-2 ">
+          {
+            tour.highlights.map((highlight: string, index: number) => (
+              <div className="flex items-center space-x-2 ">
           <CheckCircle2 className="w-5 h-5 text-green-600" />
-          <span>Hotel accommodation</span>
+          <span>{highlight}</span>
         </div>
+            ))
+          }
 
-
-        <div className="flex items-center space-x-2 ">
-          <CheckCircle2 className="w-5 h-5 text-green-600" />
-          <span>Private Air–conditioned car with driver</span>
+        
         </div>
-
-        <div className="flex items-center space-x-2 ">
-          <CheckCircle2 className="w-5 h-5 text-green-600" />
-          <span>All sightseeing with private local guides</span>
-        </div>
-
-
-        <div className="flex items-center space-x-2 ">
-          <CheckCircle2 className="w-5 h-5 text-green-600" />
-          <span>Driver allowances & fuel charges</span>
-        </div>
-
-
-        <div className="flex items-center space-x-2 ">
-          <CheckCircle2 className="w-5 h-5 text-green-600" />
-          <span>Personal care and attention</span>
-        </div>
-
-        <div className="flex items-center space-x-2 ">
-          <CheckCircle2 className="w-5 h-5 text-green-600" />
-          <span>All currently applicable taxes</span>
-        </div>
-
-
-
-        </div>
-
-
-
-
 
 
 
         <div className="flex flex-col gap-4">
 
+        {
+            tour.highlightsX.map((highlight: string, index: number) => (
+              <div key={index} className="flex items-center space-x-2 ">
+          <CheckCircle2 className="w-5 h-5 text-green-600" />
+          <span>{highlight}</span>
+        </div>
+            ))
+          }
         
-        <div className="flex items-center space-x-2 ">
-          <XCircle className="w-5 h-5 text-red-500" />
-          <span>Additional Services</span>
-        </div>
-
-        
-        <div className="flex items-center space-x-2 ">
-          <XCircle className="w-5 h-5 text-red-500" />
-          <span>Insurance</span>
-        </div>
-
-        
-        <div className="flex items-center space-x-2 ">
-          <XCircle className="w-5 h-5 text-red-500" />
-          <span>Drink</span>
-        </div>
-
-       
-        <div className="flex items-center space-x-2 ">
-          <XCircle className="w-5 h-5 text-red-500" />
-          <span>Tickets</span>
-        </div>
-
 
         </div>
 
        
       </div>
-
+      <hr className="my-4 w-[90%]  lg:w-1/2" />
      <div className="w-[90%] lg:w-1/2  ">
       <h2 className="text-xl font-semibold mb-4">Itinerary</h2>
       <Accordion type="single" collapsible className="w-full flex flex-col gap-y-4">
@@ -314,24 +289,23 @@ export default function page() {
 
 
     <div className="p-6 bg-white max-w-7xl mx-auto">
-    
+    <hr className="my-4 w-[90%]  lg:w-1/2" />
       <h2 className="text-xl font-semibold mb-4">Languages</h2>
       <div className="flex flex-wrap gap-6 mb-10">
-        <div className="flex items-center space-x-2">
+
+        {
+          tour.languages.map((language: string, index: number) => (
+            <div className="flex items-center space-x-2">
           <Globe className="w-5 h-5 text-gray-600" />
-          <span>English</span>
+          <span>{language}</span>
         </div>
-        <div className="flex items-center space-x-2">
-          <Globe className="w-5 h-5 text-gray-600" />
-          <span>Francais</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <Globe className="w-5 h-5 text-gray-600" />
-          <span>Hindi</span>
-        </div>
+          ))
+        }
+        
+        
       </div>
 
-      
+      <hr className="my-4 w-[90%]  lg:w-1/2" />
       <h2 className="text-xl font-semibold mb-4">Frequently asked questions</h2>
       <Accordion type="single" collapsible className="w-[90%]  lg:w-1/2  space-y-3">
         <AccordionItem value="item-1" className="border rounded-lg px-4">
@@ -360,8 +334,9 @@ export default function page() {
 
 
 
-
+  
     <div className="p-6 bg-white max-w-7xl mx-auto">
+    <hr className="my-4 w-[90%]  lg:w-1/2" />
     <h2 className="text-xl font-semibold mb-4">Reviews</h2>
 
       
@@ -370,9 +345,9 @@ export default function page() {
         <div className="flex flex-col items-center md:items-start">
           <div className="flex items-center space-x-2">
             <span className="text-yellow-500 text-2xl">★</span>
-            <span className="text-2xl font-bold">4.9/5</span>
+            <span className="text-2xl font-bold">{tour.rating}/5</span>
           </div>
-          <p className="text-gray-600">Excellent (7 reviews)</p>
+          <p className="text-gray-600">Excellent ({tour.reviews} reviews)</p>
         </div>
 
        
@@ -401,7 +376,7 @@ export default function page() {
       </div>
 
       <p className="text-sm text-gray-500 mt-4 text-center w-[90%]  lg:w-1/2">
-        7 reviews on this Tour – Showing 4 to 6
+        {tour.reviews} reviews on this Tour – Showing 4 to 6
       </p>
 
       <hr className="my-4 w-[90%]  lg:w-1/2" />

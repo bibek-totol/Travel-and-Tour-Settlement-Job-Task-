@@ -15,42 +15,6 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Golden-Triangle-Tour-With-Pushkar",
-    href: "/golden_traingle_tour/Golden-Triangle-Tour-With-Pushkar",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description: "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
 
 export function Navbar() {
   return (
@@ -62,8 +26,8 @@ export function Navbar() {
         </Link>
 
         
-        <div className="hidden md:flex">
-          <NavigationMenu>
+        <div className="hidden md:flex z-30">
+          <NavigationMenu viewport={false}>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink>
@@ -71,71 +35,95 @@ export function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Golden Traingle Tour</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
-                    {components.map((component) => (
-                      <ListItem key={component.title}  href={component.href}>
-                        {component.title}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
+              
 
 
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
-                    {components.map((component) => (
-                      <ListItem key={component.title}  href={component.href}>
-                        {component.title}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-
-
-
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
-                    {components.map((component) => (
-                      <ListItem key={component.title}  href={component.href}>
-                        {component.title}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-
-
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[100px] gap-2 md:w-[150px] md:grid-cols-1 lg:w-[200px]">
-                    {components.map((component) => (
-                      <ListItem key={component.title}  href={component.href}>
-                        {component.title}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/docs">Docs</Link>
+          <NavigationMenuTrigger>Golden Triangle Tour</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[200px] gap-4">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/golden-triangle-ranthambore">Golden-Triangle-Tour-With-Ranthambore</Link>
                 </NavigationMenuLink>
-              </NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/rajasthan-desert-safari">Rajasthan Desert Safari Tour</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/kerala-backwaters">Kerala Backwaters & Hill Stations</Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Rajasthan Tour</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[200px] gap-4">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/kashmir-paradise-tour">Kashmir Paradise Tour</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/ladakh-adventure">Ladakh Adventure Tour</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/goa-beach-party">Goa Beach & Party Tour</Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Same Day Tour</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[200px] gap-4">
+              <li>
+              <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/andaman-islands">Andaman Islands Tour</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/sikkim-darjeeling">Sikkim & Darjeeling Delight</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/varanasi-spiritual">Varanasi Spiritual Journey</Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Weekend Tour</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[200px] gap-4">
+              <li>
+              <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/meghalaya-explorer">Meghalaya Explorer Tour</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="/golden_traingle_tour/varanasi-spiritual">Varanasi Spiritual Journey</Link>
+                </NavigationMenuLink>
+                
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+
+
+       
+
+             
 
               
             </NavigationMenuList>

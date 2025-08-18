@@ -17,6 +17,14 @@
         "Personal care and attention",
         "All currently applicable taxes"
       ],
+
+
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": [
         "Hotel accommodation",
         "Private Air-conditioned car with driver",
@@ -53,6 +61,14 @@
         "Jaisalmer Fort & Havelis",
         "Mehrangarh Fort Jodhpur"
       ],
+
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
+
       "included": [
         "Accommodation in heritage hotels & camps",
         "Breakfast & Dinner",
@@ -87,6 +103,15 @@
         "Periyar Wildlife Sanctuary",
         "Ayurvedic massage sessions"
       ],
+
+
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
+
       "included": [
         "Accommodation in resorts & houseboats",
         "Breakfast & Dinner",
@@ -117,6 +142,12 @@
       "languages": ["English", "Hindi", "Urdu"],
       "about": "Enjoy the natural beauty of Kashmir, with Dal Lake, Gulmarg, Sonmarg, and Pahalgam in a single package.",
       "highlights": ["Shikara ride in Dal Lake", "Snow activities in Gulmarg", "Lidder River in Pahalgam", "Sonmarg Valley tour"],
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": ["Hotel stay", "Breakfast & Dinner", "Private car", "Guided tours"],
       "excluded": ["Airfare", "Lunch", "Entry tickets"],
       "itinerary": [
@@ -138,7 +169,14 @@
       "groupSize": "15 People",
       "languages": ["English", "Hindi"],
       "about": "A thrilling adventure covering Leh, Pangong Lake, Nubra Valley, and Khardung La Pass.",
+      
       "highlights": ["Drive to Khardung La", "Pangong Lake camping", "Monastery visits", "Camel ride in Nubra Valley"],
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": ["Hotel & camp stay", "Meals", "Permit fees", "Local transport"],
       "excluded": ["Flight tickets", "Travel insurance"],
       "itinerary": [
@@ -160,7 +198,14 @@
       "groupSize": "Unlimited",
       "languages": ["English", "Russian", "Hindi"],
       "about": "Relax at the beaches of Goa, enjoy water sports, nightlife, and Portuguese heritage.",
+      
       "highlights": ["Baga & Calangute beaches", "Cruise party", "Old Goa churches", "Water sports"],
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": ["Hotel stay", "Breakfast", "Airport transfers"],
       "excluded": ["Lunch & Dinner", "Airfare"],
       "itinerary": [
@@ -182,6 +227,12 @@
       "languages": ["English", "Hindi", "Bengali"],
       "about": "Enjoy tropical paradise with pristine beaches, snorkeling, scuba diving, and history at Cellular Jail.",
       "highlights": ["Havelock Island", "Radhanagar Beach", "Snorkeling & scuba", "Cellular Jail light show"],
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": ["Resort stay", "Breakfast", "Ferry tickets"],
       "excluded": ["Airfare", "Lunch", "Personal expenses"],
       "itinerary": [
@@ -205,6 +256,12 @@
       "languages": ["English", "Nepali", "Hindi", "Bengali"],
       "about": "Explore monasteries, tea gardens, and Himalayan beauty in Sikkim & Darjeeling.",
       "highlights": ["Tiger Hill sunrise", "Rumtek Monastery", "Tsomgo Lake", "Tea plantations"],
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": ["Hotel stay", "Meals", "Local transport"],
       "excluded": ["Airfare", "Permit fees"],
       "itinerary": [
@@ -229,6 +286,12 @@
       "languages": ["English", "Hindi"],
       "about": "Witness Ganga Aarti, boat rides, and ancient temples in the holy city of Varanasi.",
       "highlights": ["Evening Ganga Aarti", "Morning boat ride", "Kashi Vishwanath Temple", "Sarnath excursion"],
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": ["Hotel stay", "Breakfast", "Guide services"],
       "excluded": ["Lunch", "Airfare", "Personal expenses"],
       "itinerary": [
@@ -250,6 +313,12 @@
       "languages": ["English", "Khasi", "Hindi"],
       "about": "Discover the living root bridges, Cherrapunji waterfalls, and Dawki river in Meghalaya.",
       "highlights": ["Living root bridge trek", "Mawsmai Caves", "Dawki crystal river", "Shillong city tour"],
+      "highlightsX": [
+        "Additional Services",
+        "Insurance",
+        "Drink",
+        "Tickets"
+      ],
       "included": ["Hotel stay", "Private car", "Breakfast"],
       "excluded": ["Airfare", "Lunch & Dinner"],
       "itinerary": [
