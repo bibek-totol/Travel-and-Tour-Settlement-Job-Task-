@@ -10,19 +10,14 @@ import TripsSection from "@/app/components/TripCard";
 import { Tour, alltourapidata } from "@/app/fetcApi/alltourapidata";
 import BookingForm from "@/app/components/BookingForm";
 
-
-export async function generateStaticParams(): Promise<Pick<Tour, "id">[]> {
+export async function generateStaticParams() {
   const data = await alltourapidata();
   return data.map((tour) => ({ id: tour.id }));
 }
 
-interface PageProps {
-  params: Pick<Tour, "id">; 
-}
 
-
-export default async function Page({ params }: PageProps) {
-  const data = await alltourapidata();
+export default async function Page({ params }: { params: { id: string } }) {
+  const data: Tour[] = await alltourapidata();
 
   const tour = data.find(
     (tour: { id: string }) => tour.id === params.id
