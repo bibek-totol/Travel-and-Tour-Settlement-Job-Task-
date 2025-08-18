@@ -127,6 +127,12 @@ export function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
+              <NavigationMenuItem>
+                <NavigationMenuLink>
+                  <Link className="text-black text-bold" href="/About" >About</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
 
 
        
