@@ -6,8 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+import { alltourapidata } from "@/lib/alltourapidata";
 
-export default function Section1() {
+export default async function Section1() {
+  const apidata = await alltourapidata();
   return (
     <div className="w-full flex justify-center">
       <Swiper
@@ -21,14 +23,7 @@ export default function Section1() {
         speed={1200}
         className="w-[90%] mt-10"
       >
-        {[
-          "https://explorerajasthantours.com/wp-content/uploads/2022/11/varanasi-portrait_tania-chatterjee_3-1.jpg",
-          "https://explorerajasthantours.com/wp-content/uploads/2022/11/wwwPW2_0818_2000px-Pietrusiewicz-1-1.jpg",
-          "https://explorerajasthantours.com/wp-content/uploads/2022/11/World-Heritage-Rajasthan-1-1.jpg",
-          "https://explorerajasthantours.com/wp-content/uploads/2022/11/World-Heritage-Rajasthan-1-1.jpg",
-          "https://explorerajasthantours.com/wp-content/uploads/2022/11/World-Heritage-Rajasthan-1-1.jpg",
-          "https://explorerajasthantours.com/wp-content/uploads/2022/11/World-Heritage-Rajasthan-1-1.jpg",
-        ].map((src, i) => (
+        {apidata.sliderimages.map((src, i) => (
           <SwiperSlide
             key={i}
             className="!w-[65%] sm:!w-[65%] lg:!w-[60%] rounded-lg overflow-hidden shadow-lg"
