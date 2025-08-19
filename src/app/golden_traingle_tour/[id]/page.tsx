@@ -7,30 +7,28 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import TripsSection from "@/app/components/TripCard";
-import { Tour, alltourapidata } from "@/app/fetcApi/alltourapidata";
-import BookingForm from "@/app/components/BookingForm";
 
-export async function generateStaticParams() {
+import BookingForm from "@/app/components/BookingForm";
+import { Tour } from "@/app/types/tourdatatype";
+import { alltourapidata } from "@/lib/alltourapidata";
+type Params = Promise<{ id: string }>;
+
+export async function generateStaticParams(): Promise<{ id: string }[]> {
   const data = await alltourapidata();
   return data.map((tour) => ({ id: tour.id }));
 }
 
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const { id } =  params;
+
+export default async function Page(props: { params: Params }) {
+  const { id } = await  props.params;
 
   const data: Tour[] = await alltourapidata();
+  const tour = data.find((tour) => tour.id === id);
 
-
-  const tour = data.find(
-    (tour: { id: string }) => tour.id === id
-  );
-
-
-
-
-
-
+  if (!tour) {
+    return <div>Tour not found</div>;
+  }
   const reviews = [
     {
       id: 1,
@@ -50,13 +48,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     },
   ];
 
-  if (!tour) {
-    return <div>Tour not found</div>;
-  }
+ 
 
   return (
     <div className="min-h-screen relative">
-      
       <div className="flex flex-col lg:flex-row gap-0 lg:gap-4 ">
         <p className="text-orange-500 ml-0 lg:ml-[160px] p-2 lg:p-4">Home</p>
         <p className="text-orange-500 p-2 lg:p-4">Jaipur</p>
@@ -66,7 +61,6 @@ export default async function Page({ params }: { params: { id: string } }) {
 
       <Section1 />
 
-    
       <div className="p-6 bg-white min-h-auto mx-auto max-w-7xl mt-4 ">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
           <h1 className="text-2xl font-bold">{tour.title}</h1>
@@ -77,7 +71,6 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-      
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="flex flex-col items-center border p-3 rounded-xl shadow-sm">
             <span className="font-semibold">Duration</span>
@@ -106,13 +99,10 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-        
         <div className="grid md:grid-cols-2 gap-20">
           <div>
             <h2 className="text-xl font-semibold mb-4">About this tour</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              {tour.about}
-            </p>
+            <p className="text-gray-700 leading-relaxed mb-6">{tour.about}</p>
 
             <hr className="my-4 w-[90%]  lg:w-1/2" />
             <h2 className="text-xl font-semibold mb-4">HIGHLIGHTS</h2>
@@ -127,7 +117,6 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      
       <div className="p-6 bg-white max-w-7xl mx-auto relative">
         <hr className="my-4 w-[90%]  lg:w-1/2" />
         <h2 className="text-xl font-semibold mb-2">Included/Excluded</h2>
@@ -151,49 +140,64 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-      
         <hr className="my-4 w-[90%]  lg:w-1/2" />
         <div className="w-[90%] lg:w-1/2">
           <h2 className="text-xl font-semibold mb-4">Itinerary</h2>
-          <Accordion type="single" collapsible className="w-full flex flex-col gap-y-4">
-            <AccordionItem value="item-1" className="border border-gray-300 rounded-md px-6">
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full flex flex-col gap-y-4"
+          >
+            <AccordionItem
+              value="item-1"
+              className="border border-gray-300 rounded-md px-6"
+            >
               <AccordionTrigger>
                 <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-md font-medium">
                   Delhi
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                Our Representatives will welcome you at Delhi International airport,
-                and then you will be transferred to pre-booked hotel. Take rest and
-                Overnight stay at the hotel.
+                Our Representatives will welcome you at Delhi International
+                airport, and then you will be transferred to pre-booked hotel.
+                Take rest and Overnight stay at the hotel.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2" className="border border-gray-300 rounded-md px-6">
+            <AccordionItem
+              value="item-2"
+              className="border border-gray-300 rounded-md px-6"
+            >
               <AccordionTrigger>
                 <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-md font-medium">
                   Delhi–Jaipur
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                Travel from Delhi to Jaipur and explore the Pink City with guided
-                sightseeing.
+                Travel from Delhi to Jaipur and explore the Pink City with
+                guided sightseeing.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3" className="border border-gray-300 rounded-md px-6">
+            <AccordionItem
+              value="item-3"
+              className="border border-gray-300 rounded-md px-6"
+            >
               <AccordionTrigger>
                 <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-md font-medium">
                   Jaipur
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                Full-day sightseeing in Jaipur including Amber Fort, City Palace,
-                and local markets.
+                Full-day sightseeing in Jaipur including Amber Fort, City
+                Palace, and local markets.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="border border-gray-300 rounded-md px-6">
+            <AccordionItem
+              value="item-4"
+              className="border border-gray-300 rounded-md px-6"
+            >
               <AccordionTrigger>
                 <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-md font-medium">
                   Jaipur–Ranthambore
@@ -208,7 +212,6 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-  
       <div className="p-6 bg-white max-w-7xl mx-auto">
         <hr className="my-4 w-[90%]  lg:w-1/2" />
         <h2 className="text-xl font-semibold mb-4">Languages</h2>
@@ -221,18 +224,25 @@ export default async function Page({ params }: { params: { id: string } }) {
           ))}
         </div>
 
-      
         <hr className="my-4 w-[90%]  lg:w-1/2" />
-        <h2 className="text-xl font-semibold mb-4">Frequently asked questions</h2>
-        <Accordion type="single" collapsible className="w-[90%]  lg:w-1/2  space-y-3">
+        <h2 className="text-xl font-semibold mb-4">
+          Frequently asked questions
+        </h2>
+        <Accordion
+          type="single"
+          collapsible
+          className="w-[90%]  lg:w-1/2  space-y-3"
+        >
           <AccordionItem value="item-1" className="border rounded-lg px-4">
             <AccordionTrigger className="text-left font-medium">
               Do you arrange airport transfers?
             </AccordionTrigger>
             <AccordionContent className="text-gray-600">
-              Airport transfers are not included in the price of this tour, however you can book for an arrival transfer in advance. 
-              In this case a tour operator representative will be at the airport to greet you. To arrange this please contact our 
-              customer service team once you have a confirmed booking.
+              Airport transfers are not included in the price of this tour,
+              however you can book for an arrival transfer in advance. In this
+              case a tour operator representative will be at the airport to
+              greet you. To arrange this please contact our customer service
+              team once you have a confirmed booking.
             </AccordionContent>
           </AccordionItem>
 
@@ -241,14 +251,14 @@ export default async function Page({ params }: { params: { id: string } }) {
               Nullam quis risus eget urna mollis ornare vel eu leo
             </AccordionTrigger>
             <AccordionContent className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. 
-              Cras venenatis euismod malesuada.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
+              malesuada.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </div>
 
-  
       <div className="p-6 bg-white max-w-7xl mx-auto">
         <hr className="my-4 w-[90%]  lg:w-1/2" />
         <h2 className="text-xl font-semibold mb-4">Reviews</h2>
@@ -322,7 +332,6 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-    
       <TripsSection />
     </div>
   );

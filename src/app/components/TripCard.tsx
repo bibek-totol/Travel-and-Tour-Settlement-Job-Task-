@@ -1,7 +1,6 @@
-
 import { Star, Clock, Zap, Heart, User } from "lucide-react";
 import Image from "next/image";
-import { alltourapidata } from "../fetcApi/alltourapidata";
+import { alltourapidata } from "../../lib/alltourapidata";
 import Link from "next/link";
 
 // const trips = [
@@ -79,8 +78,7 @@ import Link from "next/link";
 //   },
 // ];
 
-const TripCard  =  ({ trip }: { trip: any }) => {
-
+const TripCard = ({ trip }: { trip: any }) => {
   return (
     <div className="bg-white rounded-lg shadow hover:shadow-lg transition p-2">
       <div className="relative">
@@ -89,7 +87,6 @@ const TripCard  =  ({ trip }: { trip: any }) => {
           alt={trip.title}
           width={450}
           height={300}
-         
           className="object-cover rounded-lg"
         />
         <button className="absolute top-2 right-2 bg-white rounded-full p-1 shadow">
@@ -102,13 +99,11 @@ const TripCard  =  ({ trip }: { trip: any }) => {
       <div className="mt-3">
         <h3 className="text-gray-800 font-semibold">{trip.title}</h3>
         <div className="flex items-center gap-1 text-yellow-500 text-sm mt-1">
-  {Array.from({ length: trip.rating }).map((_, i) => (
-    <Star key={i} className="w-4 h-4 fill-yellow-500" />
-  ))}
-  <span className="text-gray-500 ml-1">
-    {trip.reviews} Reviews
-  </span>
-</div>
+          {Array.from({ length: trip.rating }).map((_, i) => (
+            <Star key={i} className="w-4 h-4 fill-yellow-500" />
+          ))}
+          <span className="text-gray-500 ml-1">{trip.reviews} Reviews</span>
+        </div>
 
         <div className="flex items-center justify-between text-sm text-gray-500 mt-2">
           <span className="flex items-center gap-1">
@@ -123,19 +118,18 @@ const TripCard  =  ({ trip }: { trip: any }) => {
   );
 };
 
-const  TripsSection = async() => {
-  const trips = await alltourapidata()
+const TripsSection = async () => {
+  const trips = await alltourapidata();
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
         Get inspired for your next trip
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {trips.map((trip:any, index:number) => (
+        {trips.map((trip: any, index: number) => (
           <Link href={`/golden_traingle_tour/${trip.id}`}>
-           <TripCard key={index} trip={trip} />
+            <TripCard key={index} trip={trip} />
           </Link>
-         
         ))}
       </div>
     </div>

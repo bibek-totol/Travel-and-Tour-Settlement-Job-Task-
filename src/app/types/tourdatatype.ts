@@ -20,10 +20,3 @@ export interface ItineraryItem {
     excluded: string[];
     itinerary: ItineraryItem[];
   }
-  
-  export async function alltourapidata(): Promise<Tour[]> {
-    const res = await fetch("http://localhost:3000/api.json");
-    const data: Tour[] = await res.json();
-    return data;
-  }
-  
