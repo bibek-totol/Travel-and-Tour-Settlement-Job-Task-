@@ -23,18 +23,21 @@ export default async function Section1() {
         speed={1200}
         className="w-[90%] mt-10"
       >
-        {apidata.sliderimages.map((src, i) => (
-          <SwiperSlide
-            key={i}
-            className="!w-[65%] sm:!w-[65%] lg:!w-[60%] rounded-lg overflow-hidden shadow-lg"
-          >
-            <img
-              src={src}
-              alt={`Slide ${i + 1}`}
-              className="w-full h-[220px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
-            />
-          </SwiperSlide>
-        ))}
+        {apidata.map((tour, i) => (
+  <SwiperSlide
+    key={i}
+    className="!w-[65%] sm:!w-[65%] lg:!w-[60%] rounded-lg overflow-hidden shadow-lg"
+  >
+    {tour.sliderimages.map((src: any, j: number) => (
+      <img
+        key={j}
+        src={src}
+        alt={`Slide ${j + 1}`}
+        className="w-full h-[220px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
+      />
+    ))}
+  </SwiperSlide>
+))}
       </Swiper>
     </div>
   );

@@ -18,6 +18,6 @@ export interface ItineraryItem {
     highlightsX: string[];
     included: string[];
     excluded: string[];
-    sliderimages: string[];
+    sliderimages: any;
     itinerary: ItineraryItem[];
   }
